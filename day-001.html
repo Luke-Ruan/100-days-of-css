@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>100 Days of CSS - 1--2017-04-22</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Exo');
+    body {
+        background: #333;
+    }
+    
+    #box {
+        width: 300px;
+        color: white;
+        background-color: white;
+        text-align: center;
+        margin: 10% auto;
+        padding: 10px;
+        border: 5px solid #ffd900;
+        box-shadow: 2px 2px 10px black;
+    }
+    
+    h3 {
+        color: black;
+        font-family: exo;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    
+    .buttons {
+        display: block;
+        margin: 50px auto;
+        width: 100px;
+        height: 25px;
+        background: #333;
+        border: 5px groove #ffd900;
+        font: 12px exo;
+        box-shadow: 1px 1px 5px;
+        padding: 1px;
+    }
+    
+    .animation:hover {
+        transform: scale(1.15);
+        transition: all .3s ease;
+        box-shadow: 3px 3px 10px #333;
+    }
+    
+    .buttons:focus {
+        outline: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h3>CSS Button Hover/Click</h3>
+        <button class="buttons animation">Button 1</button>
+        <button class="buttons">Button 2</button>
+        <button class="buttons">Button 3</button>
+    </div>
+</body>
+
+</html>
