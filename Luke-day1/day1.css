@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Exo');
+
+#box{
+	width: 300px;
+	color: white;
+	background-color: white;
+	text-align: center;
+	margin: 10% auto;
+	padding: 10px;
+	border: 5px groove #ffd900;
+	box-shadow: 2px 2px 10px black;
+}
+
+body{
+	background: #333;
+}
+
+h3{
+	color: black;
+	font-family: exo;
+}
+
+.button{
+	display: block;
+	margin: 50px auto;
+	width: 100px;
+	height: 25px;
+	background: #333;
+	border: 5px groove #ffd900;
+	font-family: exo;
+	font-size: 12px;
+	color: white;
+	padding: 1px;
+	box-shadow: 1px 1px 3px #ffd900;
+}
+/***************************************************
+   大漠老师，这段代码其实在这里也没什么用处吧 
+***************************************************/
+/*这段代码是有用处的，他的处理功能是用来做聚焦处理，当按钮得到焦点时的样式*/
+
+/* 明白了老师，这里就是点击之后，因为按钮获取了焦点，所以在鼠标离开的情况下依然会显示focus的样式 */
+.button:focus{
+	outline: none;
+	background:#555;
+}
+
+
+/***************************************************
+
+transition:用于控制样式变化的过渡效果;
+	四个属性值
+    transition-property（发生变化的属性，列表用逗号隔开，默认all）
+    transition-duration（完成变化效果的持续时间）
+    transition-timing-function（效果变化的速率：
+	    ease：（逐渐变慢）默认值，ease函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0).
+	    linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0).
+	    ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0).
+	    ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0).
+	    ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)
+	）
+    transition-delay （参数为时间，单位为s（秒）或者ms（毫秒），默认就是0，也就是立即执行，如果在多个动画直接有先后顺序，那么它就会派上用场）
+
+***************************************************/
+
+/***************************************************
+
+transform的属性包括(分别有x、y之分,比如：rotatex() 和 rotatey()):
+	rotate() //旋转
+	skew()  //倾斜
+	scale() //放缩
+	translate()  //位移
+***************************************************/
+
+.button:hover{
+	background: #222;
+	cursor: pointer;
+	transform:scale(1.15);
+	transition: all 0.3s ease;
+	box-shadow: 3px 3px 10px #333;
+}
