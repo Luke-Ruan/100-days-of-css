@@ -1,0 +1,158 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font: 100% / 1.3em 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.loading{
+  background: rgba(0,0,0,.65);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.loading > div{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate3d(-50%,-50%,0);
+}
+
+.loading .c{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ff8c00;
+  border-radius: 100%;
+}
+
+.loading .c1{
+  top: 10px;
+  left: 10px;
+  transform-origin: 20px 20px;
+  animation: spin-a 2s infinite cubic-bezier(0.5,0,0.5,1);
+}
+
+.loading .c2{
+  top: 10px;
+  right: 10px;
+  transform-origin: -4px 20px;
+  animation: spin-b 2s infinite cubic-bezier(0.5,0,0.5,1);
+}
+
+.loading .c3{
+  right: 10px;
+  bottom: 10px;
+  transform-origin: -4px -4px;
+  animation: spin-c 2s infinite cubic-bezier(0.5,0,0.5,1);
+}
+
+.loading .c4{
+  bottom: 10px;
+  left: 10px;
+  transform-origin: 20px -4px;
+  animation: spin-d 2s infinite cubic-bezier(0.5,0,0.5,1);
+}
+
+@keyframes spin-b{
+  0%{
+    transform: rotate(90deg);
+  }
+  0%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-b{
+  0%{
+    transform: rotate(90deg);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  25%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-c{
+  0%{
+    transform: rotate(90deg);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  50%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-d{
+  0%{
+    transform: rotate(90deg);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  75%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.loading > span{
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: 30px;
+  color: #ff8c00;
+  font-size: 12px;
+  text-align:center;
+}
+
+.content{
+  padding: 200px;
+  text-align: center;
+}
