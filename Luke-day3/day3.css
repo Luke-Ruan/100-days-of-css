@@ -1,0 +1,21 @@
+/* CSS3边框专题 */
+
+/* 已知CSS3中如果边框的宽度大于颜色数量值，则余下的宽度将显示最后一个颜色值
+
+现测试如果边框宽度值小于颜色数量值，将怎么展示
+ */
+.test1{
+	margin: 30px auto;
+	width: 200px;
+	height: 100px;
+	/*CSS3的transparent需要在后面添加4个方向的颜色说明*/
+	border: 5px solid transparent;
+	border-radius: 15px 0 15px 0;
+	-moz-border-top-colors:#a0a #909 #808 #707 #606 #505 #f00;
+	-moz-border-right-colors:#a0a #909 #808 #707 #606 #505 #f00;
+	-moz-border-bottom-colors:#a0a #909 #808 #707 #606 #505 #f00;
+	-moz-border-left-colors:#a0a #909 #808 #707 #606 #505 #f00;
+}
+/*可见颜色的渲染是第一个颜色值在最外层，然后依次往内渲染，当宽度值小于颜色数量值，
+将忽略多余的颜色值（即忽略后面的颜色值）
+*/
