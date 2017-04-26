@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
+        ul,li{
+            list-style: none;
+        }
         body{
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
@@ -24,21 +27,23 @@
         .login{
 
             height: 100%;
-            padding: 70px;
+            padding: 60px;
         }
         .nav{
            margin-bottom: 100px;
+            margin-left:-15px;
         }
-        .nav label{
+        .nav li{
             font-size: 20px;
             margin-right: 20px;
+            float: left;
             color:rgba(255, 255, 255, 0.2);
         }
-        .nav label.select {
+        .nav li.select {
             border-bottom: 2px solid #1161ed;
             color: #FFFFFF;
         }
-        section .box{
+        .login-form .box{
             width: 89%;
             border-radius: 25px;
             background-color:rgba(255, 255, 255, 0.1) ;
@@ -50,7 +55,7 @@
 
 
         }
-        section .tag {
+        .login-form .tag {
             display: block;
             opacity: 0.4;
             margin-top: 15px;
@@ -59,17 +64,17 @@
             padding-left: 15px;
             
         }
-        section .box:focus{
+        .login-form .box:focus{
             border-color: #fff;
             transition: all 0.5s ease-in-out;
             background-color: rgba(255, 255, 255, 0) ;
 
         }
-        section .rember{
+        .login-form .rember{
             padding: 30px 0 30px 52px;
             position: relative;
         }
-        section .rember input{
+        .login-form .rember input{
             background-color:rgba(255, 255, 255, 0.1);
             display: inline-block;
             -webkit-appearance: none;
@@ -78,10 +83,10 @@
             left: 15px;
 
         }
-        section .rember input:checked{
+        .login-form .rember input:checked{
             background-color: #1161ed;
         }
-        section .rember input:checked:after{
+        .login-form .rember input:checked:after{
               content: '\2714';
             font-size: 10px;
             color:  #FFFFFF;
@@ -90,7 +95,7 @@
             top: 0px;
 
         }
-        section .button{
+        .login-form .button{
             background-color: #1161ed;
             color: #FFFFFF;
             font-size: 15px;
@@ -99,7 +104,7 @@
             width: 100%;
             transition: all 0.5s ease-in-out;
         }
-        section .button:hover{
+        .login-form .button:hover{
 
               box-shadow: 0px 5px 50px -10px #1161ed;
              background-color: #4082f5;
@@ -121,24 +126,30 @@
 </head>
 <body>
 <div class="sign-in">
-<form class="login">
-    <nav class="nav">
-        <label class="select">SIGN IN</label>
-        <label>SIGN UP</label>
-    </nav>
-    <section>
-        <label class="tag">USERNSME</label>
-        <input class="box box-focus">
-        <label class="tag">PASSWOED</label>
-        <input class="box focus">
-        <div class="rember"><input type="checkbox"> Keep me Signed in</div>
-        <button class="box button">SIGN IN</button>
-    </section>
+    <div class="login">
+        <ul class="nav">
+            <li class="select">SIGN IN</li>
+            <li>SIGN UP</li>
+        </ul>
+        <form class="login-form">
+            <div class="login-name">
+                <label class="tag">USERNSME</label>
+                <input type="username" class="box box-focus"/>
+            </div>
+            <div class="log-pwd">
+                <label class="tag">PASSWOED</label>
+                <input  type="password" class="box focus"/>
+            </div>
+            <div class="rember">
+                <input type="checkbox"> Keep me Signed in
+            </div>
+            <button class="box button">SIGN IN</button>
+        </form>
 
-    <div class="footer">
-        <label>Forgot PassWord?</label>
+        <div class="footer">
+            <label>Forgot PassWord?</label>
+        </div>
     </div>
-</form>
 </div>
 </body>
 </html>
