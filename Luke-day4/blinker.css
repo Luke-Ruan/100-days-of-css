@@ -1,0 +1,51 @@
+html,body{
+	height: 100vh;
+	width: 100vw;
+}
+
+.blinker{
+	position: absolute;
+	cursor: help;
+	background: #123456;
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	left: 50%;
+	transition: box-shadow 0.3s;
+	box-shadow: 0 0 0 .25em #123456;
+	animation: blinker 2s cubic-bezier(0,0,0.25,1) infinite;
+}
+
+.blinker:before{
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	display: block;
+	widows: 2.5em;
+	height: 2.5em;
+	transition: box-shadow .3s;
+	box-shadow: 0 0 0 .25em #123456;
+	animation: blinker 2s cubic-bezier(0,0,0.25,1) infinite;
+}
+
+.blinker:after{
+	height: 6em;
+	width: 6em;
+	background: rgba(191,12,120,0.1);
+	opacity: 0;
+	transition: opacity cubic-bezier(0,0,0.25,1) 0.3s;
+}
+
+@keyframes blinker{
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	25% {
+		opacity: .75;
+	}
+	100%,50%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
